@@ -106,8 +106,3 @@ select * from customer
 order by first_name;
 
 
-
-
-
-
-
