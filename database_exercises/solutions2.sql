@@ -17,9 +17,6 @@ insert into actor(first_name,last_name) values ('Aisha','Khan'),('Omar','Malik')
 --ex6
 insert into category(name) values ('Machine Learning')
 
---ex7
-insert into film(title,rating,language_id) values ('mashina yaratish','PG-13',1)
-
 --ex8
 insert into staff(store_id,first_name,last_name,email,address_id,username) values (1,'eshmat','toshmatov','eshmat01@gmail.com',1,'eshmat01')
 
@@ -45,8 +42,7 @@ update category set name='artificial intelegence' where category_id=1
 --ex14
 update customer set activebool=false where last_update>'2025-01-01 13:00:00.000'
  
---ex15
-update film set special_feature = 'Deleted Scenes' where length>180
+ 
 
 
 --ex16
