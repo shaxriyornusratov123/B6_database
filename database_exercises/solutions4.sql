@@ -76,11 +76,12 @@ group by customer_id
 having count(customer_id)>20
 
 --ex20
-select date(rental_date),round(AVG(rental_id),2) from rental
-group by  date(rental_date)
+select round(avg(count_per_day),2) 
+FROM (select count(rental_id) as count_per_day
+from rental group by date(rental_date))
 
 --ex 21
-------
+select count(rental_id) from rental group by staff_id;
 
 --ex22
 select staff_id,count(staff_id) as count_of_rentals from rental
@@ -106,4 +107,4 @@ select count(customer_id) from customer
 
 --ex27
 
-
+select count(customer_id) from customer where active=1
