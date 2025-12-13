@@ -107,10 +107,34 @@ select avg(rental_rate), min(rental_rate), max(rental_rate),
 avg(replacement_cost), min(replacement_cost), max(replacement_cost) from film;
 
 
+--ex11
+select active,count(*) from customer 
+group by active
+
+--ex12
+select rental_id from rental 
+where rental_date between '2005-05-01' and '2005-05-31' 
+
+--ex13
+select title from film 
+ where title like 'A%';
+
+--ex14
+select first_name , last_name from customer 
+where first_name ilike '%jo%' and last_name ilike '%jo%';
+
+--ex15
+SELECT film_id, title
+FROM film
+WHERE rental_rate > 2
+EXCEPT
+SELECT film_id, title
+FROM film
+WHERE replacement_cost < 20;
 
 
 
-
+ 
 
 
 
